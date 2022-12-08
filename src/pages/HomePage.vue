@@ -15,7 +15,7 @@
           :class="`btn btn-danger ${!nextPage ? 'btn-info' : ''}`">Next</button>
       </div>
       <!-- NOTE will not break page when trying to dig into a null property  use v-if or elvis (?) -->
-      <div v-if="pokemon" class="col-9">
+      <div v-if="pokemon" class="col-9 activepoke ">
         <img :src="pokemon?.img" alt="" class="img-fluid">
         <div>{{ pokemon?.name }}</div>
         <div class="d-flex gap-3">
@@ -80,6 +80,9 @@ export default {
   background-color: rgba(11, 81, 146, 0.737);
 }
 
+.activepoke {
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/003/520/597/original/abstract-background-with-various-beautiful-shapes-free-video.jpg");
+}
 
 .poketag {
   color: rgba(39, 39, 210, 0.799);
