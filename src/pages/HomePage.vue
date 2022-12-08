@@ -1,10 +1,10 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-3 pokelist">
-        <ul>
+      <div class="col-3">
+        <ul class="pokelist elevation-5">
           <li v-for="p in pokemons" :key="p.name">
-            <button @click="getActivePokemon(p.url)" class="btn btn-outline-danger my-1">
+            <button @click="getActivePokemon(p.url)" class="btn my-1 rounded poketag elevation-5">
               {{ p.name }}
             </button>
           </li>
@@ -77,6 +77,18 @@ export default {
 
 <style scoped lang="scss">
 .pokelist {
-  background-color: rgba(84, 18, 31, 0.519);
+  background-color: rgba(11, 81, 146, 0.737);
+}
+
+
+.poketag {
+  color: rgba(39, 39, 210, 0.799);
+  text-shadow: 1px 1px rgb(21, 22, 30), 0px 0px 5px rgba(71, 0, 249, 0.74);
+  border-style: solid;
+  border-color: rgba(187, 30, 30, 0.77);
+  border-radius: 20%;
+  background-color: rgba(192, 189, 189, 0.352);
+  font-weight: bold;
+  letter-spacing: 0.08rem
 }
 </style>
