@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-3">
+      <div class="col-3 pokelist">
         <ul>
           <li v-for="p in pokemons" :key="p.name">
             <button @click="getActivePokemon(p.url)" class="btn btn-outline-danger my-1">
@@ -76,5 +76,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.pokelist {
+  background-color: rgba(84, 18, 31, 0.519);
+}
 </style>
