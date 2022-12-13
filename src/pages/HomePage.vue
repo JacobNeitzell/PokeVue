@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-3">
         <ul class="pokelist elevation-5">
-          <li v-for="p in pokemons" :key="p.name">
+          <li v-for="p in pokemons" :key="p.name" >
             <button @click="getActivePokemon(p.url)" class="btn my-1 rounded poketag elevation-5">
               {{ p.name }}
             </button>
