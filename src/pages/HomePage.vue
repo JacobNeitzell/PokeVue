@@ -24,6 +24,7 @@
             height="64" :title="t.type?.name">
         </div>
         <img v-for="s in pokemon?.sprites" :src="s" alt="" class="selectable">
+
       </div>
     </div>
   </div>
