@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-3">
         <ul class="pokelist elevation-5">
-          <li v-for="p in pokemons" :key="p.name" >
+          <li v-for="p in pokemons" :key="p.name">
             <button @click="getActivePokemon(p.url)" class="btn my-1 rounded poketag elevation-5">
               {{ p.name }}
             </button>
@@ -23,7 +23,7 @@
             :src="`https://jakeoverall.github.io/who-is-that-pokemon/assets/img/types/${t.type?.name}.webp`" alt=""
             height="64" :title="t.type?.name">
         </div>
-        <img v-for="s in pokemon?.sprites" :src="s" alt="">
+        <img v-for="s in pokemon?.sprites" :src="s" alt="" class="selectable">
       </div>
     </div>
   </div>
@@ -49,7 +49,7 @@ export default {
     getPokemons()
     return {
       // NOTE this is bad, don't do this
-      pokemons: computed(() => AppState.pokemons),
+      pokemons: computed(() => AppState.pokemons.filter(p => p.name.toUpperCase())),
       // NOTE this is bad, don't do this
       pokemon: computed(() => AppState.pokemon),
       nextPage: computed(() => AppState.nextPage),
